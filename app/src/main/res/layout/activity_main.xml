@@ -27,6 +27,7 @@
         >
 
         <Button
+            android:id="@+id/search"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="@dimen/small_padding"
@@ -43,6 +44,7 @@
             app:iconTint="@color/black" />
 
         <Button
+            android:id="@+id/library"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="@dimen/small_padding"
@@ -59,6 +61,7 @@
             app:iconTint="@color/yp_black" />
 
         <Button
+            android:id="@+id/settings"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="8dp"
