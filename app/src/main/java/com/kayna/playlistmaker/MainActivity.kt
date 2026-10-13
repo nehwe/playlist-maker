@@ -1,5 +1,6 @@
 package com.kayna.playlistmaker
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -13,49 +14,48 @@ import androidx.core.view.WindowInsetsCompat
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
 
-        val buttonsAnonymous = listOf(
-            findViewById<Button>(R.id.search),
-            findViewById<Button>(R.id.library)
-        )
+        val buttonSearch = findViewById<Button>(R.id.search)
 
-        val buttonLambda = findViewById<Button>(R.id.settings)
+        val buttonLibrary = findViewById<Button>(R.id.library)
+
+        val buttonSettings = findViewById<Button>(R.id.settings)
+
         // реализация через анонимный класс
         val buttonClickListener: View.OnClickListener = object : View.OnClickListener {
             override fun onClick(p0: View?) {
                 when (p0?.id) {
 
                     R.id.search -> {
-                        Toast.makeText(
-                            this@MainActivity,
-                            "нажали кнопку [Поиск]",
-                            Toast.LENGTH_SHORT
-                        ).show()
+                        val searchIntent = Intent(this@MainActivity,
+                            SearchActivity::class.java)
+                        startActivity(searchIntent)
                     }
 
                     R.id.library -> {
-                        Toast.makeText(
-                            this@MainActivity,
-                            "нажали кнопку [Медиатека]",
-                            Toast.LENGTH_SHORT
-                        ).show()
+                        val libraryIntent = Intent(this@MainActivity,
+                            LibraryActivity::class.java)
+                        startActivity(libraryIntent)
                     }
                 }
             }
         }
 
-        buttonsAnonymous.forEach {
-            it.setOnClickListener(buttonClickListener)
-        }
+        buttonSearch.setOnClickListener(buttonClickListener)
+
+        buttonLibrary.setOnClickListener(buttonClickListener)
+
         // реализация через лямбду
-        buttonLambda.setOnClickListener {
-            Toast.makeText(
-                this@MainActivity,
-                "нажали кнопку [Настройки]",
-                Toast.LENGTH_SHORT
-            ).show()
+        buttonSettings.setOnClickListener {
+            val settingsIntent = Intent(this, SettingsActivity::class.java)
+            startActivity(settingsIntent)
         }
     }
 
