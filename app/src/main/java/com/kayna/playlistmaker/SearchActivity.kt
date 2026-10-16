@@ -24,7 +24,7 @@ class SearchActivity : AppCompatActivity() {
         buttonBack.setOnClickListener {
             val displayIntent = Intent(this@SearchActivity,
                 MainActivity::class.java)
-            startActivity(displayIntent)
+            finish()
         }
     }
 }

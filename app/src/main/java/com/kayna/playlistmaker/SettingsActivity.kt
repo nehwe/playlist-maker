@@ -1,6 +1,5 @@
 package com.kayna.playlistmaker
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -27,7 +26,7 @@ class SettingsActivity : AppCompatActivity() {
             override fun onClick(v: View?) {
                 val displayIntent = Intent(this@SettingsActivity,
                     MainActivity::class.java)
-                startActivity(displayIntent)
+                finish()
             }
         }
 

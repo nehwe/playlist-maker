@@ -24,7 +24,7 @@ class LibraryActivity : AppCompatActivity() {
         buttonBack.setOnClickListener {
             val displayIntent = Intent(this@LibraryActivity,
                 MainActivity::class.java)
-            startActivity(displayIntent)
+            finish()
         }
     }
 }
