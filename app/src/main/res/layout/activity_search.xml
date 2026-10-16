@@ -12,8 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/menu_height"
         android:gravity="center_vertical"
-        android:paddingStart="@dimen/menu_padding"
-        android:paddingEnd="@dimen/menu_padding">
+        android:paddingHorizontal="@dimen/layout_margin">
 
         <ImageButton
             android:id="@+id/back"
