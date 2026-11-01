@@ -1,34 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout
-    android:id="@+id/main"
+    android:id="@+id/settings"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical">
+    style="@style/LinearLayoutStyle">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/menu_height"
-        android:gravity="center_vertical"
-        android:paddingHorizontal="@dimen/layout_margin">
+        style="@style/LinearLayoutHeadStyle">
 
         <ImageButton
             android:id="@+id/back"
-            android:layout_width="@dimen/image_size"
-            android:layout_height="@dimen/image_size"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_arrow_back" />
+            style="@style/ImageButtonBackStyle"/>
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
             android:text="@string/settings"
-            android:textColor="@color/yp_black"
-            android:textSize="@dimen/title_text_size" />
+            style="@style/TextViewHeadStyle"/>
     </LinearLayout>
 
     <LinearLayout
@@ -38,83 +24,55 @@
         android:paddingHorizontal="@dimen/layout_margin">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/menu_height"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            style="@style/LinearLayoutListStyle">
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="@string/dark_theme"
-                android:textColor="@color/black"
-                android:textSize="@dimen/menu_text_size" />
+                style="@style/TextViewStyle" />
 
             <Switch
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true" />
+                android:checked="true"
+                android:theme="@style/Switch"
+                />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/menu_height"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            style="@style/LinearLayoutListStyle">
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="@string/to_share"
-                android:textColor="@color/black"
-                android:textSize="@dimen/menu_text_size" />
+                style="@style/TextViewStyle" />
 
             <ImageView
-                android:layout_width="@dimen/image_size"
-                android:layout_height="@dimen/image_size"
-                android:src="@drawable/ic_share" />
+                android:src="@drawable/ic_share"
+                style="@style/ImageViewSettingsLayoutStyle"/>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/menu_height"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            style="@style/LinearLayoutListStyle">
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="@string/to_support"
-                android:textColor="@color/yp_black"
-                android:textSize="@dimen/menu_text_size" />
+                style="@style/TextViewStyle"
+                />
 
             <ImageView
-                android:layout_width="@dimen/image_size"
-                android:layout_height="@dimen/image_size"
-                android:src="@drawable/ic_support" />
+                android:src="@drawable/ic_support"
+                style="@style/ImageViewSettingsLayoutStyle"/>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/menu_height"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            style="@style/LinearLayoutListStyle">
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="@string/user_agreement"
-                android:textColor="@color/black"
-                android:textSize="@dimen/menu_text_size" />
+                style="@style/TextViewStyle"/>
 
             <ImageView
-                android:layout_width="@dimen/image_size"
-                android:layout_height="@dimen/image_size"
-                android:src="@drawable/ic_chevron_right" />
+                android:src="@drawable/ic_chevron_right"
+                style="@style/ImageViewSettingsLayoutStyle"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
