@@ -41,6 +41,9 @@
         <item name="android:textFontWeight">@integer/font_weight_head</item>
     </style>
     <style name="LinearLayoutListStyle">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/menu_height</item>
         <item name="android:gravity">center_vertical</item>

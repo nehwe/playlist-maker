@@ -24,6 +24,7 @@
         android:paddingHorizontal="@dimen/layout_margin">
 
         <LinearLayout
+            android:id="@+id/theme"
             style="@style/LinearLayoutListStyle">
 
             <TextView
@@ -39,6 +40,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/share"
             style="@style/LinearLayoutListStyle">
 
             <TextView
@@ -51,6 +53,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/support"
             style="@style/LinearLayoutListStyle">
 
             <TextView
@@ -64,6 +67,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/userAgreement"
             style="@style/LinearLayoutListStyle">
 
             <TextView
