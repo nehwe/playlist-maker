@@ -13,6 +13,8 @@
         <!-- Status bar color. -->
         <!-- Switch thumb color. -->
         <item name="colorSwitchThumb">@color/enable_thumb</item>
+        <!-- EditText Search Layout, color for cursor-->
+        <item name="colorControlActivated">@color/yp_blue</item>
     </style>
     <style name="Theme.PlaylistMaker" parent="Base.Theme.PlaylistMaker" />
 </resources>

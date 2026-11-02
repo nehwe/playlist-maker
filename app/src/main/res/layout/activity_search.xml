@@ -1,20 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/search"
     xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/LinearLayoutStyle">
 
-    <LinearLayout
-        style="@style/LinearLayoutHeadStyle">
+    <LinearLayout style="@style/LinearLayoutHeadStyle">
 
         <ImageButton
             android:id="@+id/back"
-            style="@style/ImageButtonBackStyle"/>
+            style="@style/ImageButtonBackStyle" />
 
         <TextView
             android:text="@string/search"
-            style="@style/TextViewHeadStyle"/>
+            style="@style/TextViewHeadStyle" />
     </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+
+
+            android:background="@drawable/bg_search_input"
+            android:drawableStart="@drawable/search"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/yp_text_gray"
+
+            android:gravity="center_vertical"
+            android:hint="@string/search"
+            android:imeOptions="actionSearch"
+
+            android:inputType="textFilter"
+            android:maxLines="1"
+
+            android:paddingStart="12dp"
+            android:paddingEnd="40dp"
+
+            android:paddingHorizontal="12dp"
+            android:textColor="@color/yp_black"
+            android:textColorHint="@color/yp_text_gray"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/clearIcon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="12dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Очистить поиск"
+            android:visibility="gone"
+            app:tint="@color/yp_text_gray" />
+    </FrameLayout>
+
 
 </LinearLayout>
