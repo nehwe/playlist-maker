@@ -32,14 +32,18 @@ class MainActivity : AppCompatActivity() {
                 when (p0?.id) {
 
                     R.id.search -> {
-                        val searchIntent = Intent(this@MainActivity,
-                            SearchActivity::class.java)
+                        val searchIntent = Intent(
+                            this@MainActivity,
+                            SearchActivity::class.java
+                        )
                         startActivity(searchIntent)
                     }
 
                     R.id.library -> {
-                        val libraryIntent = Intent(this@MainActivity,
-                            LibraryActivity::class.java)
+                        val libraryIntent = Intent(
+                            this@MainActivity,
+                            LibraryActivity::class.java
+                        )
                         startActivity(libraryIntent)
                     }
                 }

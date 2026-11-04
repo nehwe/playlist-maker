@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/library"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/LinearLayoutStyle">
 
-    <LinearLayout
-        style="@style/LinearLayoutHeadStyle">
+    <LinearLayout style="@style/LinearLayoutHeadStyle">
 
         <ImageButton
             android:id="@+id/back"
-            style="@style/ImageButtonBackStyle"/>
+            style="@style/ImageButtonBackStyle" />
 
         <TextView
-            android:text="@string/media_library"
-            style="@style/TextViewHeadStyle"/>
+            style="@style/TextViewHeadStyle"
+            android:text="@string/media_library" />
     </LinearLayout>
 
 </LinearLayout>

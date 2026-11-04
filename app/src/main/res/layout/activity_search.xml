@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/search"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/LinearLayoutStyle">
 
     <LinearLayout style="@style/LinearLayoutHeadStyle">
@@ -12,54 +12,51 @@
             style="@style/ImageButtonBackStyle" />
 
         <TextView
-            android:text="@string/search"
-            style="@style/TextViewHeadStyle" />
+            style="@style/TextViewHeadStyle"
+            android:text="@string/search" />
     </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="8dp">
+        android:layout_marginHorizontal="@dimen/half"
+        android:layout_marginTop="@dimen/quarter">
 
         <EditText
             android:id="@+id/searchEditText"
             android:layout_width="match_parent"
-            android:layout_height="36dp"
-
+            android:layout_height="@dimen/whole"
 
             android:background="@drawable/bg_search_input"
             android:drawableStart="@drawable/search"
-            android:drawablePadding="8dp"
-            android:drawableTint="@color/yp_text_gray"
+            android:drawablePadding="@dimen/quarter"
+            android:drawableTint="?attr/colorOnSurface"
 
             android:gravity="center_vertical"
             android:hint="@string/search"
             android:imeOptions="actionSearch"
 
             android:inputType="textFilter"
-            android:maxLines="1"
+            android:maxLines="@integer/unit"
 
-            android:paddingStart="12dp"
-            android:paddingEnd="40dp"
+            android:paddingHorizontal="@dimen/padding_inner"
+            android:paddingStart="@dimen/padding_inner"
 
-            android:paddingHorizontal="12dp"
-            android:textColor="@color/yp_black"
-            android:textColorHint="@color/yp_text_gray"
-            android:textSize="16sp" />
+            android:paddingEnd="@dimen/padding_end"
+            android:textColor="?attr/colorAccent"
+            android:textColorHint="?attr/colorOnSurface"
+            android:textSize="@dimen/body" />
 
         <ImageView
             android:id="@+id/clearIcon"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="@dimen/half"
+            android:layout_height="@dimen/half"
             android:layout_gravity="end|center_vertical"
-            android:layout_marginEnd="12dp"
-            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:layout_marginEnd="@dimen/padding_inner"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Очистить поиск"
+            android:contentDescription="@string/search_clear"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
             android:visibility="gone"
-            app:tint="@color/yp_text_gray" />
+            app:tint="?attr/colorOnSurface" />
     </FrameLayout>
-
-
 </LinearLayout>

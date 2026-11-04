@@ -1,42 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/settings"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/LinearLayoutStyle">
 
-    <LinearLayout
-        style="@style/LinearLayoutHeadStyle">
+    <LinearLayout style="@style/LinearLayoutHeadStyle">
 
         <ImageButton
             android:id="@+id/back"
-            style="@style/ImageButtonBackStyle"/>
+            style="@style/ImageButtonBackStyle" />
 
         <TextView
-            android:text="@string/settings"
-            style="@style/TextViewHeadStyle"/>
+            style="@style/TextViewHeadStyle"
+            android:text="@string/settings" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingHorizontal="@dimen/layout_margin">
+        android:paddingHorizontal="@dimen/half">
 
         <LinearLayout
             android:id="@+id/theme"
             style="@style/LinearLayoutListStyle">
 
             <TextView
-                android:text="@string/dark_theme"
-                style="@style/TextViewStyle" />
+                style="@style/TextViewStyle"
+                android:text="@string/dark_theme" />
 
             <Switch
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:theme="@style/Switch"
-                />
+                android:theme="@style/Switch" />
         </LinearLayout>
 
         <LinearLayout
@@ -44,12 +41,12 @@
             style="@style/LinearLayoutListStyle">
 
             <TextView
-                android:text="@string/to_share"
-                style="@style/TextViewStyle" />
+                style="@style/TextViewStyle"
+                android:text="@string/to_share" />
 
             <ImageView
-                android:src="@drawable/ic_share"
-                style="@style/ImageViewSettingsLayoutStyle"/>
+                style="@style/ImageViewSettingsLayoutStyle"
+                android:src="@drawable/ic_share" />
         </LinearLayout>
 
         <LinearLayout
@@ -57,13 +54,12 @@
             style="@style/LinearLayoutListStyle">
 
             <TextView
-                android:text="@string/to_support"
                 style="@style/TextViewStyle"
-                />
+                android:text="@string/to_support" />
 
             <ImageView
-                android:src="@drawable/ic_support"
-                style="@style/ImageViewSettingsLayoutStyle"/>
+                style="@style/ImageViewSettingsLayoutStyle"
+                android:src="@drawable/ic_support" />
         </LinearLayout>
 
         <LinearLayout
@@ -71,12 +67,12 @@
             style="@style/LinearLayoutListStyle">
 
             <TextView
-                android:text="@string/user_agreement"
-                style="@style/TextViewStyle"/>
+                style="@style/TextViewStyle"
+                android:text="@string/user_agreement" />
 
             <ImageView
-                android:src="@drawable/ic_chevron_right"
-                style="@style/ImageViewSettingsLayoutStyle"/>
+                style="@style/ImageViewSettingsLayoutStyle"
+                android:src="@drawable/ic_chevron_right" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

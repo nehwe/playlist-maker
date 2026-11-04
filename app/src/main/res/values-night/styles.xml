@@ -1,62 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="LinearLayoutStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">?attr/colorSecondary</item>
         <item name="android:orientation">vertical</item>
     </style>
+
     <style name="ButtonStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
         <item name="android:fontFamily">@font/ys_display_medium</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">0dp</item>
-        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">@dimen/zero</item>
+        <item name="android:layout_weight">@integer/unit</item>
         <item name="android:backgroundTint">?attr/colorPrimary</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:textColor">?attr/colorOnPrimary</item>
         <item name="android:textSize">@dimen/title_text_size</item>
-        <item name="cornerRadius">@dimen/button_corner_radius</item>
+        <item name="cornerRadius">@dimen/half</item>
         <item name="iconGravity">textStart</item>
-        <item name="iconPadding">@dimen/iconPadding</item>
+        <item name="iconPadding">@dimen/padding_icon</item>
         <item name="iconTint">?attr/colorOnPrimary</item>
         <item name="android:textFontWeight">@integer/font_weight_head</item>
     </style>
+
     <style name="TextViewStyle">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_weight">1</item>
+        <item name="android:layout_weight">@integer/unit</item>
         <item name="android:textColor">?attr/colorOnSecondary</item>
-        <item name="android:textSize">@dimen/menu_text_size</item>
+        <item name="android:textSize">@dimen/body</item>
         <item name="android:fontFamily">@font/ys_display_regular</item>
         <item name="android:textFontWeight">@integer/font_weight_list</item>
     </style>
+
     <style name="TextViewHeadStyle">
-        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_width">@dimen/zero</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_weight">1</item>
+        <item name="android:layout_weight">@integer/unit</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">?attr/colorOnSecondary</item>
         <item name="android:textSize">@dimen/title_text_size</item>
         <item name="android:fontFamily">@font/ys_display_medium</item>
         <item name="android:textFontWeight">@integer/font_weight_head</item>
     </style>
+
     <style name="LinearLayoutListStyle">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/menu_height</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:orientation">horizontal</item>
     </style>
+
     <style name="LinearLayoutHeadStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/menu_height</item>
         <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingHorizontal">@dimen/layout_margin</item>
+        <item name="android:paddingHorizontal">@dimen/half</item>
     </style>
+
     <style name="ImageViewSettingsLayoutStyle">
         <item name="android:layout_width">@dimen/image_size</item>
         <item name="android:layout_height">@dimen/image_size</item>
         <item name="android:tint">?attr/colorPrimaryVariant</item>
     </style>
+
     <style name="ImageButtonBackStyle">
         <item name="android:layout_width">@dimen/image_size</item>
         <item name="android:layout_height">@dimen/image_size</item>
@@ -64,6 +75,7 @@
         <item name="android:tint">?attr/colorPrimary</item>
         <item name="android:src">@drawable/ic_arrow_back</item>
     </style>
+
     <style name="Switch" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- active thumb & track color -->
         <item name="colorControlActivated">?attr/colorSwitchThumb</item>

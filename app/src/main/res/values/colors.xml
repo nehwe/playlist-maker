@@ -4,8 +4,8 @@
     <color name="yp_black">#1A1B22</color>
     <color name="yp_blue">#3772E7</color>
     <color name="yp_red">#F56B6C</color>
-    <color name="yp_gray_light">#E6E8EB</color>
-    <color name="yp_text_gray">#AEAFB4</color>
+    <color name="marble">#E6E8EB</color>
+    <color name="aluminium_snow">#AEAFB4</color>
 
     <!--Switch colors-->
     <color name="enable_thumb">#00d6C3</color>

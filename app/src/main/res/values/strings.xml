@@ -8,18 +8,18 @@
     <string name="user_agreement">Пользовательское соглашение</string>
     <string name="to_share">Поделиться приложением</string>
     <string name="dark_theme">Темная тема</string>
-    
+
     <!-- Settings Layout -->
 
-    <!-- Share -->
     <string name="share_link" translatable="false">"https://practicum.yandex.ru/android-developer/     "</string>
     <string name="share_title">Курс «Android-разработчик» с модулем по ИИ</string>
 
-    <!-- Support -->
     <string name="email">akaynaryan@yandex.ru</string>
     <string name="email_subject">"Сообщение разработчикам и разработчицам приложения Playlist Maker"</string>
     <string name="email_text">"Спасибо разработчикам и разработчицам за крутое приложение!"</string>
 
-    <!-- User Agreement -->
     <string name="offer">https://yandex.ru/legal/practicum_offer/</string>
+
+    <!-- Search Layout -->
+    <string name="search_clear">Очистить поиск</string>
 </resources>

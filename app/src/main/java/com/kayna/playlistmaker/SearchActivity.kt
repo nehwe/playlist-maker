@@ -1,12 +1,10 @@
 package com.kayna.playlistmaker
 
-import android.content.Context
-import android.view.inputmethod.InputMethodManager
-import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
@@ -21,6 +19,7 @@ class SearchActivity : AppCompatActivity() {
         private const val KEY_SEARCH_TEXT: String = "KEY_SEARCH_TEXT"
         private const val SEARCH_TEXT: String = ""
     }
+
     private var searchKey: String = SEARCH_TEXT
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,7 +47,8 @@ class SearchActivity : AppCompatActivity() {
             inputEditText.setText("")
 
             // принудительно скрываем клавиатуру при нажатии на крестик
-            val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
+            val inputMethodManager =
+                getSystemService(INPUT_METHOD_SERVICE) as? InputMethodManager
             inputMethodManager?.hideSoftInputFromWindow(inputEditText.windowToken, 0)
             inputEditText.requestFocus()
         }
@@ -57,10 +57,12 @@ class SearchActivity : AppCompatActivity() {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
                 // empty
             }
+
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 searchKey = s.toString()
                 clearButton.visibility = clearButtonVisibility(s)
             }
+
             override fun afterTextChanged(s: Editable?) {
                 // empty
             }

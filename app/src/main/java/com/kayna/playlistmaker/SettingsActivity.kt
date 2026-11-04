@@ -44,12 +44,16 @@ class SettingsActivity : AppCompatActivity() {
                         val shareIntent = Intent(Intent.ACTION_SEND).apply {
                             type = "text/plain"
                             putExtra(Intent.EXTRA_TEXT, shareLink)
-                            putExtra(Intent.EXTRA_TITLE,
-                                getString(R.string.share_title))
+                            putExtra(
+                                Intent.EXTRA_TITLE,
+                                getString(R.string.share_title)
+                            )
                         }
 
-                        val chooserIntent = Intent.createChooser(shareIntent,
-                            getString(R.string.share_title))
+                        val chooserIntent = Intent.createChooser(
+                            shareIntent,
+                            getString(R.string.share_title)
+                        )
                         startActivity(chooserIntent)
                     }
 
@@ -57,12 +61,18 @@ class SettingsActivity : AppCompatActivity() {
                         val message = getString(R.string.email_text)
                         val shareIntent = Intent(Intent.ACTION_SENDTO)
                         shareIntent.data = Uri.parse("mailto:")
-                        shareIntent.putExtra(Intent.EXTRA_EMAIL,
-                            arrayOf(getString(R.string.email)))
-                        shareIntent.putExtra(Intent.EXTRA_TEXT,
-                            message)
-                        shareIntent.putExtra(Intent.EXTRA_SUBJECT,
-                            getString(R.string.email_subject))
+                        shareIntent.putExtra(
+                            Intent.EXTRA_EMAIL,
+                            arrayOf(getString(R.string.email))
+                        )
+                        shareIntent.putExtra(
+                            Intent.EXTRA_TEXT,
+                            message
+                        )
+                        shareIntent.putExtra(
+                            Intent.EXTRA_SUBJECT,
+                            getString(R.string.email_subject)
+                        )
                         startActivity(shareIntent)
                     }
 

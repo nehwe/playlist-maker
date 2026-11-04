@@ -22,8 +22,10 @@ class LibraryActivity : AppCompatActivity() {
         val buttonBack = findViewById<ImageButton>(R.id.back)
 
         buttonBack.setOnClickListener {
-            val displayIntent = Intent(this@LibraryActivity,
-                MainActivity::class.java)
+            val displayIntent = Intent(
+                this@LibraryActivity,
+                MainActivity::class.java
+            )
             finish()
         }
     }
