@@ -11,7 +11,9 @@
 
     <!-- Settings Layout -->
 
-    <string name="share_link" translatable="false">"https://practicum.yandex.ru/android-developer/     "</string>
+    <string name="share_link" translatable="false">
+        "https://practicum.yandex.ru/android-developer/"
+    </string>
     <string name="share_title">Курс «Android-разработчик» с модулем по ИИ</string>
 
     <string name="email">akaynaryan@yandex.ru</string>
