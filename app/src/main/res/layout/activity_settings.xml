@@ -1,119 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    android:id="@+id/main"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/settings"
+    style="@style/LinearLayoutStyle">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/menu_height"
-        android:gravity="center_vertical"
-        android:paddingHorizontal="@dimen/layout_margin">
+    <LinearLayout style="@style/LinearLayoutHeadStyle">
 
         <ImageButton
             android:id="@+id/back"
-            android:layout_width="@dimen/image_size"
-            android:layout_height="@dimen/image_size"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_arrow_back" />
+            style="@style/ImageButtonBackStyle" />
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/settings"
-            android:textColor="@color/yp_black"
-            android:textSize="@dimen/title_text_size" />
+            style="@style/TextViewHeadStyle"
+            android:text="@string/settings" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingHorizontal="@dimen/layout_margin">
+        android:paddingHorizontal="@dimen/half">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/menu_height"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:id="@+id/theme"
+            style="@style/LinearLayoutListStyle">
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/dark_theme"
-                android:textColor="@color/black"
-                android:textSize="@dimen/menu_text_size" />
+                style="@style/TextViewStyle"
+                android:text="@string/dark_theme" />
 
             <Switch
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true" />
+                android:checked="true"
+                android:theme="@style/Switch" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/menu_height"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:id="@+id/share"
+            style="@style/LinearLayoutListStyle">
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/to_share"
-                android:textColor="@color/black"
-                android:textSize="@dimen/menu_text_size" />
+                style="@style/TextViewStyle"
+                android:text="@string/to_share" />
 
             <ImageView
-                android:layout_width="@dimen/image_size"
-                android:layout_height="@dimen/image_size"
+                style="@style/ImageViewSettingsLayoutStyle"
                 android:src="@drawable/ic_share" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/menu_height"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:id="@+id/support"
+            style="@style/LinearLayoutListStyle">
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/to_support"
-                android:textColor="@color/yp_black"
-                android:textSize="@dimen/menu_text_size" />
+                style="@style/TextViewStyle"
+                android:text="@string/to_support" />
 
             <ImageView
-                android:layout_width="@dimen/image_size"
-                android:layout_height="@dimen/image_size"
+                style="@style/ImageViewSettingsLayoutStyle"
                 android:src="@drawable/ic_support" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/menu_height"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:id="@+id/userAgreement"
+            style="@style/LinearLayoutListStyle">
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/user_agreement"
-                android:textColor="@color/black"
-                android:textSize="@dimen/menu_text_size" />
+                style="@style/TextViewStyle"
+                android:text="@string/user_agreement" />
 
             <ImageView
-                android:layout_width="@dimen/image_size"
-                android:layout_height="@dimen/image_size"
+                style="@style/ImageViewSettingsLayoutStyle"
                 android:src="@drawable/ic_chevron_right" />
         </LinearLayout>
     </LinearLayout>

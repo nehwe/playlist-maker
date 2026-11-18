@@ -13,7 +13,7 @@ class LibraryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_library)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.library)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
@@ -22,8 +22,10 @@ class LibraryActivity : AppCompatActivity() {
         val buttonBack = findViewById<ImageButton>(R.id.back)
 
         buttonBack.setOnClickListener {
-            val displayIntent = Intent(this@LibraryActivity,
-                MainActivity::class.java)
+            val displayIntent = Intent(
+                this@LibraryActivity,
+                MainActivity::class.java
+            )
             finish()
         }
     }

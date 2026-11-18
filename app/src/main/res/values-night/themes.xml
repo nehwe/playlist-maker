@@ -1,7 +1,24 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.PlaylistMaker" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/yp_white</item>
+        <item name="colorPrimaryVariant">@color/yp_white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/yp_black</item>
+        <item name="colorSecondaryVariant">@color/yp_black</item>
+        <item name="colorOnSecondary">@color/yp_white</item>
+        <!-- Status bar color. -->
+        <!-- Switch thumb color. -->
+        <item name="colorSwitchThumb">@color/enable_thumb_night</item>
+        <!-- Search Layout colors -->
+        <item name="colorSurface">@color/yp_white</item>
+        <item name="colorOnSurface">@color/yp_black</item>
+        <item name="colorControlActivated">@color/yp_blue</item>
+        <item name="colorAccent">@color/yp_black</item>
     </style>
+
+    <style name="Theme.PlaylistMaker" parent="Base.Theme.PlaylistMaker" />
 </resources>
