@@ -15,4 +15,5 @@
 
     <dimen name="title_text_size">22sp</dimen>
     <dimen name="body">16sp</dimen>
+    <dimen name="info">11sp</dimen>
 </resources>
