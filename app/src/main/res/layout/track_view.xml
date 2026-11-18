@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://android.com"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="61dp"
     android:gravity="center_vertical"
@@ -11,6 +12,7 @@
     <!-- Обложка трека -->
     <ImageView
         android:id="@+id/artwork"
+        style="@style/ImageViewTrackStyle"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:scaleType="centerCrop"
@@ -28,17 +30,18 @@
         <!-- Название композиции -->
         <TextView
             android:id="@+id/trackName"
+            style="@style/TextViewStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textColor="#1A1B22"
-            android:textSize="16sp"
+            android:textSize="@dimen/body"
+            android:textColor="?attr/colorPrimary"
             tools:text="Yesterday (Remastered 2009)" />
 
         <!-- Нижняя строка: Исполнитель • Время -->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="1dp"
             android:gravity="center_vertical"
@@ -46,13 +49,11 @@
 
             <TextView
                 android:id="@+id/artistName"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:textColor="#AEAFB4"
-                android:textSize="11sp"
+                style="@style/TextViewTrackStyle"
                 tools:text="The Beatles" />
 
             <!-- Точка-разделитель -->
@@ -66,8 +67,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
-                android:textColor="#AEAFB4"
-                android:textSize="11sp"
+                style="@style/TextViewTrackStyle"
                 tools:text="2:55" />
         </LinearLayout>
     </LinearLayout>
@@ -75,8 +75,7 @@
     <!-- Стрелка справа -->
     <ImageView
         android:id="@+id/arrow_forward"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        style="@style/ImageButtonBackStyle"
         android:src="@drawable/ic_arrow_forward" />
 
 </LinearLayout>

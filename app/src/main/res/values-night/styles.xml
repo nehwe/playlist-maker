@@ -80,4 +80,16 @@
         <!-- active thumb & track color -->
         <item name="colorControlActivated">?attr/colorSwitchThumb</item>
     </style>
+
+    <style name="ImageViewTrackStyle">
+        <item name="android:layout_width">@dimen/image_size</item>
+        <item name="android:layout_height">@dimen/image_size</item>
+    </style>
+
+    <style name="TextViewTrackStyle">
+        <item name="android:textColor">?attr/colorPrimaryVariant</item>
+        <item name="android:textSize">@dimen/info</item>
+        <item name="android:fontFamily">@font/ys_display_regular</item>
+        <item name="android:textFontWeight">@integer/font_weight_list</item>
+    </style>
 </resources>
